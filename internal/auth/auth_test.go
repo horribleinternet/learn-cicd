@@ -7,6 +7,8 @@ import (
 )
 
 func TestApiKey(t *testing.T) {
+	t.Fatalf("test fail")
+
 	empty := http.Header{}
 	str, err := GetAPIKey(empty)
 	if len(str) > 0 || err == nil {
